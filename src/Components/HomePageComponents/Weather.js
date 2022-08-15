@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { WeatherDataContext } from '../../App';
 
 const Weather = () => {
+
+    const data = useContext(WeatherDataContext)
+    const { clouds: {all}, name, main: {temp, temp_max, temp_min} } = data[0]
+
     return (
-        <div className='h-full'>
-            <h1>cityName</h1>
-            <h1>temprature</h1>
-            <h1>clouds</h1>
+        <div className='h-fit bg-white'>
             <div>
-                <h1>h:00</h1>
-                <h1>l:00</h1>
+                <h1>{name}</h1>
+                <h1>{temp}</h1>
+                <h1>{all}</h1>
+                <div>
+                    <h1>H:{temp_max}</h1>
+                    <h1>L:{temp_min}</h1>
+                </div>
             </div>
         </div>
     );
