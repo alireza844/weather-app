@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { WeatherDataContext } from '../../App';
+import { WeatherDataContext } from '../App';
 
 const Weather = () => {
 
