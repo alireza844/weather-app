@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import axios from 'axios'
+import icon from '../../images/icons/air-quality-icon.png'
 
 const AirQuality = (props) => {
 
@@ -30,13 +31,14 @@ const AirQuality = (props) => {
 
     return (
         <div className='bg-white'>
-            {console.log(airQualityValue)}
             {
                 data.length
                 ? <div>
-                    <h2>☁AIR QUALITY</h2>
+                    <div>
+                        <img className='w-6' src={icon} alt="air quality icon" />
+                        <h2>AIR QUALITY</h2>
+                    </div>
                     <h1>{airQualityValue}</h1>
-                    {console.log(airQualityValue)}
                 </div>
                 : <h1>Loading...</h1>
             }
