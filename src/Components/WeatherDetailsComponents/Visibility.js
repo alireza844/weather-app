@@ -18,7 +18,7 @@ const Visibility = () => {
         <div className='m-4'>
             {
                 visibility.length
-                ? <div className='flex flex-col bg-blue-200 p-4 rounded-xl'>
+                ? <div className='flex flex-col p-4 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 border border-gray-200'>
                     <div className='flex justify-start items-center mb-2 opacity-75'>
                         <img className='w-8' src={icon} alt="visibility icon" />
                         <h2 className='pl-2 text-2xl font-semibold'>VISIBILITY</h2>

@@ -18,7 +18,7 @@ const Humidity = () => {
             {
                 humidityData.length
                 ?
-                <div className='flex flex-col bg-blue-200 p-2 rounded-xl'>
+                <div className='flex flex-col p-2 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 border border-gray-200'>
                     <div className='flex justify-start items-center mb-2 opacity-75'>
                         <img className='w-8' src={icon} alt="humidity icon" />
                         <h2 className='pl-2 text-xl font-semibold'>HUMIDITY</h2>
