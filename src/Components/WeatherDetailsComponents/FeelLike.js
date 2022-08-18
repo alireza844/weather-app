@@ -14,20 +14,18 @@ const FeelLike = () => {
     },[])
 
     return (
-        <div>
+        <div className='m-1'>
             {
                 feelLike.length
                 ?
-                <div>
-                    <div>
-                        <img className='w-6' src={icon} alt='feel like icon' />
-                        <h1>FEELS LIKE</h1>
+                <div className='flex flex-col bg-blue-200 p-2 rounded-xl'>
+                    <div className='flex justify-start items-center mb-2 opacity-75'>
+                        <img className='w-8' src={icon} alt='feel like icon' />
+                        <h2 className='pl-2 text-xl font-semibold'>FEELS LIKE</h2>
                     </div>
-                    <div>
-                        <h1>{feelLike}°C</h1>
-                    </div>
+                    <h1 className='font-extralight text-6xl text-center'>{feelLike}°C</h1>
                 </div>
-                : <h1>Loading...</h1>
+                : <h1 className='flex flex-col bg-blue-200 p-4 align-center rounded-xl'>Loading...</h1>
             }
         </div>
     );

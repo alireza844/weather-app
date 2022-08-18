@@ -15,7 +15,7 @@ function SetCity() {
   }, [])
 
   const clickHandler = () => {
-    axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${inputVal}&limit=5&appid=${apiKey}`)
+    axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${inputVal}&limit=5&appid=${apiKey}`)
     .then(response => {
       setData([response.data[0]])
     })
@@ -41,7 +41,7 @@ function SetCity() {
 
       <button 
       className='w-28 h-10 font-bold bg-black text-white text-center rounded-3xl transition-all hover:rounded-lg hover:bg-blue-700'
-      onClick={inputVal ? clickHandler : alert("please enter a vaild city name!!")}>search</button>
+      onClick={clickHandler}>search</button>
       {
         data.length ?
           localStorages()

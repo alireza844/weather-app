@@ -15,20 +15,20 @@ const Wind = () => {
     },[])
 
     return (
-        <div>
+        <div className='m-4'>
             {
                 windDetails.length
-                ? <div>
-                    <div>
-                        <img className='w-6' src={icon} alt="wind icon" />
-                        <h1>WIND</h1>
+                ? <div className='flex flex-col bg-blue-200 p-4 rounded-xl'>
+                    <div className='flex justify-start items-center mb-2 opacity-75'>
+                        <img className='w-8' src={icon} alt="wind icon" />
+                        <h2 className='pl-2 text-2xl font-semibold'>WIND</h2>
                     </div>
                     <div>
-                        <h1>Wind Speed: {windDetails[0].speed}KM/h</h1>
-                        <h1>Wind Degree: {windDetails[0].deg}°</h1>
+                        <h1 className='font-normal text-xl'>Wind Speed: {windDetails[0].speed}KM/h</h1>
+                        <h1 className='font-normal text-xl'>Wind Degree: {windDetails[0].deg}°</h1>
                     </div>
                 </div>
-                : <h1>Loading</h1>
+                : <h1 className='flex flex-col bg-blue-200 p-4 align-center rounded-xl'>Loading...</h1>
             }
         </div>
     );

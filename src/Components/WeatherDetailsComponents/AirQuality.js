@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import axios from 'axios'
 import icon from '../../images/icons/air-quality-icon.png'
@@ -10,7 +10,7 @@ const AirQuality = (props) => {
     let airQualityValue = "";
 
     useEffect(() => {
-        axios.get(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`)
+        axios.get(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`)
         .then(response => {
             setData([response.data.list[0].main.aqi])
         })
@@ -30,17 +30,17 @@ const AirQuality = (props) => {
 
 
     return (
-        <div className='bg-white'>
+        <div className='m-4 mt-0 pt-4'>
             {
                 data.length
-                ? <div>
-                    <div>
-                        <img className='w-6' src={icon} alt="air quality icon" />
-                        <h2>AIR QUALITY</h2>
+                ? <div className='flex flex-col bg-blue-200 p-4 rounded-xl'>
+                    <div className='flex justify-start items-center mb-2 opacity-75'>
+                        <img className='w-8' src={icon} alt="air quality icon" />
+                        <h2 className='pl-2 text-2xl font-semibold'>AIR QUALITY</h2>
                     </div>
-                    <h1>{airQualityValue}</h1>
+                    <h1 className='font-normal text-xl'>{airQualityValue}</h1>
                 </div>
-                : <h1>Loading...</h1>
+                : <h1 className='flex flex-col bg-blue-200 p-4 align-center rounded-xl'>Loading...</h1>
             }
         </div>
     );
