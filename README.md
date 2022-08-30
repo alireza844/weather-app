@@ -1,4 +1,5 @@
 # Getting Started with Create React App
+## ⚠️THIS PROJECT ONLY RESPONSIVED FOR SMALL DEVICES⚠️
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
